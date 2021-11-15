@@ -27,6 +27,7 @@
         <module>step-01</module>
         <module>step-03</module>
         <module>step-03-review</module>
+        <module>step-04</module>
     </modules>
     <dependencies>
         <dependency>
@@ -39,6 +40,11 @@
             <groupId>cglib</groupId>
             <artifactId>cglib</artifactId>
             <version>3.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.5.0</version>
         </dependency>
     </dependencies>
 
