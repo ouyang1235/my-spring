@@ -1,6 +1,6 @@
 package cn.bugstack.springframework.beans;
 
-public class BeansException extends Throwable {
+public class BeansException extends RuntimeException {
     public BeansException(String msg, Throwable e) {
 
     }
