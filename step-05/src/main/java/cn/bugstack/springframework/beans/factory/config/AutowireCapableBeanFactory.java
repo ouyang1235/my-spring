@@ -1,4 +1,6 @@
 package cn.bugstack.springframework.beans.factory.config;
 
-public interface AutowireCapableBeanFactory {
+import cn.bugstack.springframework.beans.factory.BeanFactory;
+
+public interface AutowireCapableBeanFactory extends BeanFactory {
 }
