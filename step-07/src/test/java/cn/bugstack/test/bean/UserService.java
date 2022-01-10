@@ -1,6 +1,9 @@
 package cn.bugstack.test.bean;
 
-public class UserService {
+import cn.bugstack.springframework.beans.factory.DisposableBean;
+import cn.bugstack.springframework.beans.factory.InitializingBean;
+
+public class UserService implements InitializingBean, DisposableBean {
 
     private String name;
 
@@ -56,5 +59,15 @@ public class UserService {
     @Override
     public String toString() {
         return super.toString();
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("执行：UserService.destroy");
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("执行：UserService.afterPropertiesSet");
     }
 }

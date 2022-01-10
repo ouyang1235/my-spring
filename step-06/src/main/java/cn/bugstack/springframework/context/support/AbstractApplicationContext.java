@@ -16,7 +16,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader i
         refreshBeanFactory();
         //2.获取BeanFactory (未实现)
         ConfigurableListableBeanFactory beanFactory = getBeanFactory();
-        //3.在Bean实例化之前，执行BeanFactoryProcessor
+        //3.在Bean实例化之前，执行BeanFactoryPostProcessor
         invokeBeanFactoryPostProcessor(beanFactory);
         //4.BeanPostProcessor需要提前于其他Bean对象实例化之前执行注册操作
         registerBeanPostProcessors(beanFactory);
