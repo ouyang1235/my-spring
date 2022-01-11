@@ -32,6 +32,7 @@
         <module>step-06</module>
         <module>step-07</module>
         <module>step-08</module>
+        <module>step-09</module>
     </modules>
     <dependencies>
         <dependency>
@@ -49,6 +50,11 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>5.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-cli</artifactId>
+            <version>0.14</version>
         </dependency>
     </dependencies>
 
