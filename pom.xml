@@ -33,6 +33,7 @@
         <module>step-07</module>
         <module>step-08</module>
         <module>step-09</module>
+        <module>step-10</module>
     </modules>
     <dependencies>
         <dependency>
