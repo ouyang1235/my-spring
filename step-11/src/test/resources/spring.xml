@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans>
 
-    <bean id="userDao" class="cn.bugstack.test.bean.ProxyUserDao" />
-
     <bean id="userService" class="cn.bugstack.test.bean.UserService">
         <property name="name" value="10001"/>
         <property name="company" value="腾讯"/>
@@ -11,10 +9,5 @@
     </bean>
 
 
-<!--    <bean class="cn.bugstack.test.event.ContextRefreshedEventListener"/>-->
-
-    <bean class="cn.bugstack.test.event.CustomEventListener"/>
-
-<!--    <bean class="cn.bugstack.test.event.ContextClosedEventListener"/>-->
 
 </beans>

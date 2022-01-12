@@ -34,6 +34,7 @@
         <module>step-08</module>
         <module>step-09</module>
         <module>step-10</module>
+        <module>step-11</module>
     </modules>
     <dependencies>
         <dependency>
@@ -56,6 +57,16 @@
             <groupId>org.openjdk.jol</groupId>
             <artifactId>jol-cli</artifactId>
             <version>0.14</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.7</version>
+        </dependency>
+        <dependency>
+            <groupId>aopalliance</groupId>
+            <artifactId>aopalliance</artifactId>
+            <version>1.0</version>
         </dependency>
     </dependencies>
 
