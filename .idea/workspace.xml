@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4388d7b7-0381-42f7-831c-ad6bc572d628" name="Default Changelist" comment="" />
+    <list default="true" id="4388d7b7-0381-42f7-831c-ad6bc572d628" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/step-03-nd/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/step-03-nd/src/main/java/com/ouyang/springframework/beans/BeansException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/step-03-nd/src/main/java/com/ouyang/springframework/beans/factory/BeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/step-03-nd/src/main/java/com/ouyang/springframework/beans/factory/config/BeanDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/step-03-nd/src/main/java/com/ouyang/springframework/beans/factory/config/SingletonBeanRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/step-03-nd/src/main/java/com/ouyang/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/step-03-nd/src/main/java/com/ouyang/springframework/beans/factory/support/AbstractBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/step-03-nd/src/main/java/com/ouyang/springframework/beans/factory/support/BeanDefinitionRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/step-03-nd/src/main/java/com/ouyang/springframework/beans/factory/support/CglibSubclassingInstantiationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/step-03-nd/src/main/java/com/ouyang/springframework/beans/factory/support/DefaultListableBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/step-03-nd/src/main/java/com/ouyang/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/step-03-nd/src/main/java/com/ouyang/springframework/beans/factory/support/InstantiationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/step-03-nd/src/main/java/com/ouyang/springframework/beans/factory/support/SimpleInstantiationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/step-03-nd/src/record.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/step-03-nd/src/test/java/com/ouyang/springframework/test/ApiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/step-03-nd/src/test/java/com/ouyang/springframework/test/bean/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-spring.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,23 +35,25 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\ouyang\IntelliJ IDEA 2020.2.1\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="20iSdzfW0Z7AubUZrFBxAyceuwW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/step-03/src/main/java" />
@@ -48,14 +72,16 @@
       <recent name="D:\ouyang\IdeaProject\my-spring\step-01\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTest.test_BeanFactory (1)">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ApiTest.test_BeanFactory (2)">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -70,6 +96,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="cn.bugstack.test" />
       <option name="MAIN_CLASS_NAME" value="cn.bugstack.test.ApiTest" />
+      <option name="METHOD_NAME" value="test_BeanFactory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiTest.test_BeanFactory (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="step-03-nd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ouyang.springframework.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ouyang.springframework.test" />
+      <option name="MAIN_CLASS_NAME" value="com.ouyang.springframework.test.ApiTest" />
       <option name="METHOD_NAME" value="test_BeanFactory" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -94,6 +136,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ApiTest.test_BeanFactory (2)" />
         <item itemvalue="JUnit.ApiTest.test_BeanFactory (1)" />
         <item itemvalue="JUnit.ApiTest.test_BeanFactory" />
       </list>
@@ -110,49 +153,22 @@
       <workItem from="1636526011173" duration="3273000" />
       <workItem from="1636595973461" duration="3214000" />
       <workItem from="1636685741849" duration="3610000" />
+      <workItem from="1667568220957" duration="5786000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="249" y="0" key="#Project_Structure" timestamp="1636526669980">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1636526669980" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1636686599533">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1636686599533" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1636688911147">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1636688911147" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1636688911147">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1636688911147" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1636688911146">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1636688911146" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1636688911147">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1636688911147" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1636526597026">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1636526597026" />
-    <state x="178" y="73" key="new project wizard" timestamp="1636688391087">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="178" y="73" key="new project wizard/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1636688391087" />
-    <state x="2143" y="92" key="new project wizard/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1636688228854" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1636600383906">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1636600383906" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

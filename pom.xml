@@ -37,6 +37,7 @@
         <module>step-11</module>
         <module>step-12</module>
         <module>step-13</module>
+        <module>step-02-nd</module>
     </modules>
     <dependencies>
         <dependency>
