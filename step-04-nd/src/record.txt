@@ -1,0 +1,10 @@
+第5章:为Bean对象注入属性和依赖Bean的功能实现
+
+目标：
+1.在bean对象实例化过程中注入属性和依赖的bean对象（暂时未考虑依赖循环的情况）
+
+
+主要流程：
+1.在createBean方法中添加applyPropertyValues的方法
+2.在BeanDefinition中添加PropertyValues信息
+3.Bean中间的Bean对象类型需要定义一个BeanReference，进行递归创建和填充
