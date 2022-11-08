@@ -41,6 +41,7 @@
         <module>step-04-nd</module>
         <module>step-05-nd</module>
         <module>step-06-nd</module>
+        <module>thread-01</module>
     </modules>
     <dependencies>
         <dependency>
