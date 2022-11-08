@@ -1,0 +1,15 @@
+第7章：实现应用上下文
+
+目标：
+1.给Bean实例化过程中添加扩展机制，可以完成用户扩展的自定义操作
+    ①在BeanDefinition注册后并且未实例化之前，对其进行修改操作----->BeanFactoryPostProcessor
+    ②在Bean对象实例化之后，修改Bean对象或者替换Bean对象等操作----->BeanPostProcessor
+2.将Bean对象的扩展机制功能和Spring框架上下文的包装（BeanFactory的创建和读取配置文件、注册beanDefinition等操作）融合起来，不再对外暴露，对外提供完整服务
+
+重要步骤的实现：
+1.整合包装：使用Context类，提供refresh功能，在此方法中：
+    1.对beanFactory进行初始化
+    2.读取注册所有的BeanDefinition
+    3.完成BeanFactoryPostProcessor的操作
+    4.提前实例化所有的单例对象，并完成BeanPostProcessor操作
+2.AbstractAutowireCapableBeanFactory类的createBean流程中，增加“执行 Bean 的初始化方法和 BeanPostProcessor 的前置和后置处理方法”流程
