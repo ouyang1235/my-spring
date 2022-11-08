@@ -1,0 +1,23 @@
+第六章：资源加载器解析文件注册对象
+
+前言：
+上一章test中，我们需要手动去创建PropertyValue，并手动注册BeanDefinition，这是非常麻烦的一件事情
+
+目标：
+将注册BeanDefinition的任务使用读取配置文件的方式完成
+在spring框架中，添加能解决Spring配置的读取、解析、注册Bean的操作
+
+主要流程：
+1.将需要读取的文件或其他渠道资源抽象为Resource对象，输出io流
+2.并抽象出ResourceLoader对象来从路径读取生成Resource对象
+3.再抽象出一个Reader来解析从io流中读取到的信息
+4.实现将BeanDefinition加载注册进BeanFactory中
+
+额外：
+完善了一些暂时还没用到的接口框架，在之后会使用到
+·BeanFactory，已经存在的 Bean 工厂接口用于获取 Bean 对象，这次新增加了按照类型获取 Bean 的方法：<T> T getBean(String name, Class<T> requiredType)
+·ListableBeanFactory，是一个扩展 Bean 工厂接口的接口，新增加了 getBeansOfType、getBeanDefinitionNames() 方法，在 Spring 源码中还有其他扩展方法。
+·HierarchicalBeanFactory，在 Spring 源码中它提供了可以获取父类 BeanFactory 方法，属于是一种扩展工厂的层次子接口。Sub-interface implemented by bean factories that can be part of a hierarchy.
+·AutowireCapableBeanFactory，是一个自动化处理Bean工厂配置的接口，目前案例工程中还没有做相应的实现，后续逐步完善。
+·ConfigurableBeanFactory，可获取 BeanPostProcessor、BeanClassLoader等的一个配置化接口。
+·ConfigurableListableBeanFactory，提供分析和修改Bean以及预先实例化的操作接口，不过目前只有一个 getBeanDefinition 方法。

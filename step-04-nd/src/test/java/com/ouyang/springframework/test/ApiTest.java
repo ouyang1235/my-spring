@@ -9,8 +9,6 @@ import com.ouyang.springframework.test.bean.UserDao;
 import com.ouyang.springframework.test.bean.UserService;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class ApiTest {
 
