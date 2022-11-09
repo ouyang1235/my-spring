@@ -1,0 +1,9 @@
+第九章：Aware感知容器对象
+
+目标：
+透露一些接口，让用户可以获取Spring框架提供的BeanFactory、ApplicationContext、BeanClassLoader等这些能力，去做一些拓展使用
+
+实现：
+1.提供标记接口Aware
+2.对于BeanFactory下的内容获取，在createBean中的initializeBean()过程中，将对应的对象传入get方法即可
+  对于Context下的内容，则用之前的BeanPostProcessor功能去完成即可
