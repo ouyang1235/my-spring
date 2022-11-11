@@ -1,0 +1,15 @@
+第十章：对象作用域(单例/原型)和FactoryBean实现
+
+目标：
+1.实现可以创建单例对象还是原型对象
+2.实现FactoryBean对象的创建，实现代理模式
+
+实现：
+作用域：
+0.BeanDefinition中添加作用域
+1.AbstractAutowireCapableBeanFactory中的createBean()中，根据BeanDefinition中作用于类型来决定是否添加到内存中
+
+代理FactoryBean类：
+1.创建FactoryBean接口，实现接口中getObject()可以实现功能拓展
+2.AbstractBeanFactory中doGetBean中判断是否为FactoryBean，如果是则再从中获取真实需要的Bean对象
+注意点:FactoryBean对象用了一个新的容器FactoryBeanRegistrySupport来存储
