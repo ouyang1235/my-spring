@@ -1,0 +1,8 @@
+第十一章：实现容器事件和事件监听器
+
+目标：
+使用观察者模式，构造事件、管理上下文、监听器，使用户可以在Spring框架中定义、监听、发布自己的事件
+
+具体实现：
+1.创建事件ApplicationEvent、监听器ApplicationListener、管理者ApplicationEventMulticaster三个角色
+2.AbstractApplicationContext添加成员变量ApplicationEventMulticaster，使用它进行事件相关操作，并且使用桥接模式实现用户自定义发布事件功能
