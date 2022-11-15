@@ -8,3 +8,6 @@
 
 第二步：对方法进行增强
 
+注:
+在动态代理中，统一用MethodInterceptor和MethodInvocation，来消除cglib和jdk动态代理中的方法调用差异，实现统一
+

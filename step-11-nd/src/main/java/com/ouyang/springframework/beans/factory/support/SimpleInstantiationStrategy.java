@@ -7,7 +7,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 /**
- * jdk代理实例化
+ * jdk实例化
  */
 public class SimpleInstantiationStrategy implements InstantiationStrategy{
     @Override
