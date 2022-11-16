@@ -9,6 +9,8 @@ import java.util.Random;
  */
 public class UserService implements IUserService {
 
+    public String name = "123";
+
     public String queryUserInfo() {
         try {
             Thread.sleep(new Random(1).nextInt(100));
@@ -27,4 +29,7 @@ public class UserService implements IUserService {
         return "注册用户：" + userName + " success！";
     }
 
+    public String getName() {
+        return name;
+    }
 }

@@ -37,5 +37,13 @@ public class ApiTest {
 
         IUserService proxy_cglib = (IUserService) new Cglib2AopProxy(advisedSupport).getProxy();
         System.out.println("result2:" + proxy_cglib.register("huhu"));
+
+//        UserService serv = (UserService) proxy;
+//        System.out.println(serv.name);
+//        System.out.println(serv.getName());
+
+        UserService serv2 = (UserService) proxy_cglib;
+        System.out.println(serv2.name);
+        System.out.println(serv2.getName());
     }
 }
