@@ -1,0 +1,15 @@
+第十二章：将aop动态代理融入到Bean生命周期中
+
+目标：
+将aop与Spring整合，通过配置的办法完成aop功能
+
+实现：
+1.DefaultAdvisorAutoProxyCreator：需要放入容器中，实现了BeanPostProcessor，beanFactory，在createBean过程中通过这个类来将需要代理的类进行实例化
+2.AspectJExpressionPointcutAdvisor：结合了切面和拦截方法的类，将此类放入bean容器中管理，指导DefaultAdvisorAutoProxyCreator将哪些bean进行代理化
+
+
+现在存在的问题：
+1.aop代理后，1.无法获取、使用原本注入的成员变量；2.一个切面无法使用多个方法进行织入
+2.aop代理对象不会成为单例对象进行存储吗？
+3.targetSource居然是class.newInstance进行创建的
+

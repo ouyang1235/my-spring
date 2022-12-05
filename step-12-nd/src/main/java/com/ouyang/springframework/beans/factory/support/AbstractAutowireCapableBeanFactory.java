@@ -6,10 +6,7 @@ import com.ouyang.springframework.beans.BeansException;
 import com.ouyang.springframework.beans.PropertyValue;
 import com.ouyang.springframework.beans.PropertyValues;
 import com.ouyang.springframework.beans.factory.*;
-import com.ouyang.springframework.beans.factory.config.AutowireCapableBeanFactory;
-import com.ouyang.springframework.beans.factory.config.BeanDefinition;
-import com.ouyang.springframework.beans.factory.config.BeanPostProcessor;
-import com.ouyang.springframework.beans.factory.config.BeanReference;
+import com.ouyang.springframework.beans.factory.config.*;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
@@ -35,6 +32,9 @@ import java.lang.reflect.Method;
  *
  * 09更新:
  * 在createBean中，不再默认添加单例addSingleton()，而是根据BeanDefinition来判断，并且registerDisposableBeanIfNecessary()如果是原型模式则不加入销毁队列
+ *
+ * 12更新：
+ * 在createBean中，实例化对象前，先判断是否需要变为代理对象，如果需要则走代理对象的创建模式
  */
 public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFactory implements AutowireCapableBeanFactory {
 
@@ -44,7 +44,12 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
     protected Object createBean(String beanName, BeanDefinition beanDefinition, Object[] args) throws BeansException {
         Object bean =null;
         try{
-            //代理创建对象
+            //判断是否返回代理Bean对象
+            bean = resolveBeforeInstantiation(beanName, beanDefinition);
+            if (null != bean){
+                return bean;
+            }
+            //实例化对象
             bean = createBeanInstance(beanDefinition,beanName,args);
             //给Bean填充属性
             applyPropertyValues(beanName,bean,beanDefinition);
@@ -62,6 +67,24 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
         }
 
         return bean;
+    }
+
+    protected Object resolveBeforeInstantiation(String beanName,BeanDefinition beanDefinition){
+        Object bean = applyBeanPostProcessorsBeforeInstantiation(beanDefinition.getBeanClass(), beanName);
+        if (null != bean){
+            bean = applyBeanPostProcessorsAfterInitialization(bean,beanName);
+        }
+        return bean;
+    }
+
+    protected Object applyBeanPostProcessorsBeforeInstantiation(Class<?> beanClass,String beanName){
+        for (BeanPostProcessor beanPostProcessor : getBeanPostProcessors()) {
+            if (beanPostProcessor instanceof InstantiationAwareBeanPostProcessor){
+                Object result = ((InstantiationAwareBeanPostProcessor) beanPostProcessor).postProcessorBeforeInstantiation(beanClass, beanName);
+                if (null != result) return result;
+            }
+        }
+        return null;
     }
 
     /**
